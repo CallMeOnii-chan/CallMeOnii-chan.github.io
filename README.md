@@ -1,6 +1,7 @@
 # CallMeOnii-chan.github.io
-This is a test for my website.
 
-The index should contain the links to all class projects
+This is my website for the CISC 3610 class.
 
-Please read all -lab name-.txt and -project name-.txt for any feedback and comments
+The index should contain the links to all class projects and labs.
+
+Please read all -lab name-.txt and -project name-.txt for any feedback and comments.
