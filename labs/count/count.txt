@@ -1,0 +1,27 @@
+For the count animation lab
+
+Task: Using a sprite sheet of numbers, have the program count from 0 to 10, at time increments of 500 ms. Program starts by having the number 0 displayed and then starts animating (500 ms increments) when the user presses an HTML button that is labled start. Stopping when the number 10 is reached.
+
+Please be sure and center the numbers on the canvas. For the 10, it must be using a 1 and a 0 image from the sprite sheet, not a single 10 image.
+
+Set the canvas size to the width of the number 10 from your images. Draw a background color, to make the canvas stand out from the page background.
+
+    Please set the viewport as follows
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    Find some set of numbers as a spite sheet / image:
+        https://www.google.com/search?q=numbers+as+images
+        Find a simple sheet that shows the numbers of equal size and evenly spaced out. This way its easy to use a formula to get the distances between the numbers.
+
+Helpful links:
+
+    Animating Sprite Sheets
+        MOST USEFUL: Very helpful tool to cutup a sprite sheet. Might be useful to combine with this site to rebuild the sprite sheet and get JSON values for the pieces.
+        Other Interesting Tools
+            http://www.spritecow.com/ Helps you find the size and location of the sprites in a sprite sheet. The canvas only uses positive numbers for the offset of the image (but this example is for something else and has negatives for the offset). Play with the size/offset till it looks close.
+            https://yangcha.github.io/iview/iview.html - this shows the X/Y values of the mouse. You can use this to find the location to use to calculate the offset and the size.
+    Viewport
+    onclick event
+    Centering Content - Used to center the canvas and the button on the screen.
+    JSON & JavaScript
