@@ -12,17 +12,22 @@
 <script>
  var canvas = document.getElementById("myCanvas");
  var context = canvas.getContext("2d");
- context.fillStyle = "red";
+ context.fillStyle = "red";                            // Background Color
  context.fillRect(0, 0, canvas.width, canvas.height);
  context.font="30px Arial";
  context.fillStyle = "green";
 		var line=1;
 		var height=35;
- context.fillText("Caption text",10,height*line);	
+ context.fillText("Caption text",10,height*line);	// Caption text
  context.beginPath();
  context.arc(99, 70, 40, 0, 2 * Math.PI);
- context.strokeStyle = "#FFFF00";
+ context.fillStyle = "yellow"; 				// Sun
+ context.fill();
+ context.lineWidth = 2;
+ context.strokeStyle = "#FF0000";
  context.stroke();
+ context.fillStyle = "#DEB887";				// Ground
+ context.fillRect(0, 600, canvas.width, 200);
  
 </script>
 	
