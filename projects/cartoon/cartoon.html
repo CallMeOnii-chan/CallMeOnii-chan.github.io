@@ -16,6 +16,11 @@
 		var line=1;
 		var height=35;
 		context.fillText("Caption text",10,height*line);
+context.beginPath();
+context.arc(95, 50, 40, 0, 2 * Math.PI);
+context.strokeStyle = "orange";
+context.stroke();
+context.fill("yellow"); 
     }
 
 	// Once the HTML document has finished loading and has been parsed, call the changeCanvasColor function.
