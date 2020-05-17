@@ -53,7 +53,19 @@ context.beginPath();
  context.lineTo(650,695);
  context.closePath(); 
 context.fill();
-
+	
+context.fillStyle = "#FFEBCD"; // Blanched Almond
+for(var j = 0; j < 5; j++) {				// For Loop, rocks
+  context.beginPath();
+  context.moveTo(j*100, j*100 + 500);
+  context.lineTo(j*100 +50, j*100 +550);
+  context.lineTo(j*100 -50, j*100 + 450);
+ context.closePath();
+ context.fill();
+conext.strokeStyle = "#FFE4C4"; // Bisque
+context.lineWidth = 3;
+context.stroke();
+}	
 	
 </script>
 	
