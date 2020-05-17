@@ -12,36 +12,49 @@
 <script>
  var canvas = document.getElementById("myCanvas");
  var context = canvas.getContext("2d");
- context.fillStyle = "#00BFFF";                            // Background Color
+
+context.fillStyle = "#00BFFF";                            // Background Color
  context.fillRect(0, 0, canvas.width, canvas.height);
- context.font="30px Arial";
+
+context.font="30px Arial";
  context.fillStyle = "#00008B"; // Dark Blue
 		var line=1;
 		var height=35;
  context.fillText("Caption text",10,height*line);	// Caption text
- context.beginPath();
+
+context.beginPath();
  context.arc(99, 140, 40, 0, 2 * Math.PI);
 context.fillStyle = "#FFFF00"; // Yellow		// Sun
  context.fill();
  context.lineWidth = 2;
  context.strokeStyle = "#FF0000"; // Red
  context.stroke();
+ context.closePath();
+	
  context.fillStyle = "#DEB887";	// Burly Wood		// Ground
  context.fillRect(0, 600, canvas.width, 200);
- context.strokeStyle = "#008000"; // Green
+ 
+
+ context.fillStyle = "#006400"; // Dark Green	
+context.beginPath(); 
  context.moveTo(500,700);
  context.lineTo(600,550);
  context.lineTo(700,700);
- context.lineTo(500,700);
- context.fillStyle = "#006400"; // Dark Green		// Living Quarters, A Tent
+ context.closePath();					// Living Quarters, A Tent
  context.fill();
+context.strokeStyle = "#008000"; // Green
  context.lineWidth = 5;
  context.stroke();
 
+context.fillStyle = "#000000"; // Black
+context.beginPath();
   context.moveTo(550,700);
  context.lineTo(600,650);
  context.lineTo(650,700);
- context.lineTo(550,700);	
+ context.closePath(); 
+context.fill();
+
+	
 </script>
 	
 </body>
