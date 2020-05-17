@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Canvas Example</title>
+<script>
+    function changeCanvasColor () {
+		// Locate the element "mycanvas" in the document.
+        var canvas = document.getElementById("mycanvas");
+        var context = canvas.getContext("2d");
+        context.fillStyle = "red";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+		
+		context.font="30px Arial";
+        context.fillStyle = "green";
+		var line=1;
+		var height=35;
+		context.fillText("Caption text",10,height*line);
+    }
+
+	// Once the HTML document has finished loading and has been parsed, call the changeCanvasColor function.
+    document.addEventListener('DOMContentLoaded', changeCanvasColor);
+</script>
+</head>
+<body>
+<div id="gameArea">
+    <canvas id="mycanvas" width="800" height="600"></canvas>
+</div>
+</body>
+</html>
