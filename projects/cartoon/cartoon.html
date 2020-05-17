@@ -58,14 +58,19 @@ var looper = 3;
 
 for(var j = 1; j < looper; j++) {				// For Loop, rocks
   context.beginPath();
-  context.moveTo(j*100, j*100+500);
+/*  context.moveTo(j*100, j*100+500);
   context.lineTo(j*100+50, j*100+550);
   context.lineTo(j*100-50, j*100+450);
   context.fillStyle = "#FFEBCD"; // Blanched Almond
   context.lineWidth = 3;
   conext.strokeStyle = "#FFE4C4"; // Bisque
   context.fill();
-  context.stroke();
+  context.stroke(); */
+  context.moveTo(j*50, 695);
+ context.lineTo(j*100,575);
+ context.lineTo(J*150,695);
+// context.closePath(); 
+context.fill();
   context.closePath();
 }	
 	
