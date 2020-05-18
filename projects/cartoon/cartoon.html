@@ -65,7 +65,7 @@ var repet = 3;
 
 for(var j = 0; j < repet; j++) 				// For Loop, rocks
 	{
-	context.beginPath();
+	 /*context.beginPath();
   context.moveTo(j*100, j*100+500);
   context.lineTo(j*100+50, j*100+550);
   context.lineTo(j*100-50, j*100+450);
@@ -73,8 +73,12 @@ for(var j = 0; j < repet; j++) 				// For Loop, rocks
   context.lineWidth = 3;
   conext.strokeStyle = "#FFE4C4"; // Bisque
   context.fill();
-  context.stroke(); 
-		
+  context.stroke(); */
+context.beginPath()
+context.moveTo(40, 250)
+context.lineTo(200, 500)
+context.strokeStyle = 'red'
+context.stroke()	
 //  context.closePath();
 }	
 	
