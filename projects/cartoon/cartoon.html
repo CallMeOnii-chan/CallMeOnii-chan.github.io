@@ -61,7 +61,7 @@ context.beginPath();
  context.closePath(); 
 context.fill();
 
-var repet = 3;
+var repet = 20;
 
 for(var j = 0; j < repet; j++) 				// For Loop, rocks
 	{
@@ -75,11 +75,11 @@ for(var j = 0; j < repet; j++) 				// For Loop, rocks
   context.fill();
   context.stroke(); */
 context.beginPath()
-context.moveTo(40, 250)
-context.lineTo(200, 500)
-context.strokeStyle = 'red'
+context.moveTo(j*20, 550)
+context.lineTo(j*20, 700)
+context.strokeStyle = '#7FFF00'
 context.stroke()	
-//  context.closePath();
+  context.closePath();
 }	
 	
 </script>
