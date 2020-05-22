@@ -14,20 +14,55 @@
         </a>
     </div>
 </nav>
+<audio id="drum">
+  <source src="Drum.mp3" type="audio/mpeg">
+</audio>
+<audio id="guitar">
+  <source src="Guitar.mp3" type="audio/mpeg">
+</audio>
+<audio id="piano">
+  <source src="Piano.mp3" type="audio/mpeg">
+</audio>
+<audio id="bell">
+  <source src="Bell.mp3" type="audio/mpeg">
+</audio>
+<audio id="jingle">
+  <source src="Jingle.mp3" type="audio/mpeg">
+</audio>
 
-<button type="button" onclick="play">Drum</button><br>
+<button type="button" onclick="playDrum()">Drum</button><br>
 
-<button type="button" onclick="play">Guitar</button><br>
+<button type="button" onclick="playGuitar()">Guitar</button><br>
 
-<button type="button" onclick="play">Piano</button><br>
+<button type="button" onclick="playPiano()">Piano</button><br>
 	
-<button type="button" onclick="play">Bell</button><br>
+<button type="button" onclick="playBell()">Bell</button><br>
 	
-<button type="button" onclick="play">Jingle</button><br>
+<button type="button" onclick="playJingle()">Jingle</button><br>
 
 	
-	
-	
+<script>
+var a = document.getElementById("drum");  
+var b = document.getElementById("guitar");
+var c = document.getElementById("piano");
+var d = document.getElementById("bell");
+var e = document.getElementById("jingle");
+
+function playDrum() {			
+ a.play();
+}
+function playGuitar() {			
+ b.play();
+}
+function playPiano() {			
+ c.play();
+}
+function playBell() {			
+ d.play();
+}
+function playJingle() {			
+ e.play();
+}	
 	
 </body>
 </html>
