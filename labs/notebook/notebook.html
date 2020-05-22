@@ -16,22 +16,28 @@
 </nav>
 	<h2>Notes</h2>
 	<p>Title and enter your notes below</p>	
-<form name="note_form" action="/notes.php">
+<form name="note_form" action="/notes.php">      // Form
   <label for="note_form">Title</label>
-  <input type="text" id="title" name="title" maxlength="40" oninput="textSave()"><br><br>
+  <input type="text" id="title" name="title" maxlength="40" oninput="titleSave()"><br><br>  // Max Length = 40
 
   <label for="notes">Notes</label>
- // <input type="text" id="notes" name="notes"><br><br>
- // <input type="submit" value="Submit">
+ /* <input type="text" id="notes" name="notes"><br><br>
+    <input type="submit" value="Submit"> */
 </form>
 	
-<textarea rows="10" cols="80" name="notes" form="note_form" oninput="textSave()">Enter notes here...</textarea>
+<textarea rows="10" cols="80" id="text" name="notes" form="note_form" oninput="textSave()">Enter notes here...</textarea>  // 10 x 80
 
 <script>
-function textSave() {
-  alert("The value of the input field was changed.");
+function textSave() {					// Saves text
+var x = document.getElementById("text").value; 
+localStorage.setItem("text", x);
+}
+function titleSave() {
+var x = document.getElementById("title").value; 	// Saves title
+localStorage.setItem("title", x);
 }
 </script>
-
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.getItem("lastname"); 
 </body>
 </html>
