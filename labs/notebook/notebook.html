@@ -28,14 +28,16 @@
 	
 <button type="button" onclick="clear()">Clear</button>
 <button type="button" onclick="undo()">Undo</button>
-	
+<p id="demo"></p>	
 <script>
 function textSave() {					// Saves text
 var x = document.getElementById("text").value; 
+document.getElementById("demo").innerHTML = "You wrote: " + x;
 localStorage.setItem("text", x);
 }
 function titleSave() {
 var x = document.getElementById("title").value; 	// Saves title
+document.getElementById("demo").innerHTML = "You wrote: " + x;
 localStorage.setItem("title", x);
 }
 function textLoad() {					// Loads text
