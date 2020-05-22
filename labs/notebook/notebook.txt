@@ -1,7 +1,6 @@
 By: Davante Middleton
 
-Notes: This lab wasn't hard but I think the intended purpose is impossible to accomplish.
-
+Note: This lab wasn't hard but I think the intended purpose is impossible to accomplish.
 The notes are to be SAVED ON INPUT, so any change is immediately saved. 
 However, the undo simply loads that saved input, causing no change to occur.
 If the task called for THREE buttons, one to save, clear and undo, then one could load a specific set of notes and update the notes to be
