@@ -28,27 +28,35 @@
 	
 <button type="button" onclick="clear()">Clear</button>
 <button type="button" onclick="undo()">Undo</button>
-<p id="demo"></p>	
+
+<!-- <p id="demo1"></p><br><p id="demo2"></p><br><p id="demo3"></p><br><p id="demo4"></p><br> Testing -->
+	
 <script>
 function textSave() {					// Saves text
 var x = document.getElementById("text").value; 
-document.getElementById("demo").innerHTML = "You wrote: " + x;
+// document.getElementById("demo1").innerHTML = "1. You wrote: " + x;
 localStorage.setItem("text", x);
 }
 function titleSave() {
 var x = document.getElementById("title").value; 	// Saves title
-document.getElementById("demo").innerHTML = "You wrote: " + x;
+// document.getElementById("demo2").innerHTML = "2. You wrote: " + x;
 localStorage.setItem("title", x);
 }
 function textLoad() {					// Loads text
-document.getElementById("text").innerHTML = localStorage.getItem("text");
+var x = localStorage.getItem("text");
+// document.getElementById("demo3").innerHTML = "3. You wrote: " + x;
+document.getElementById("text").innerHTML = x;
 }
 function titleLoad() {					// Loads title
-document.getElementById("title").innerHTML = localStorage.getItem("title");
+var x = localStorage.getItem("title");
+// document.getElementById("demo4").innerHTML = "4. You wrote: " + x;
+document.getElementById("title").innerHTML = x;
 }
 function clear(){
 localStorage.removeItem("title");
-localStorage.removeItem("text");
+localStorage.removeItem("text");			// Clears storage
+document.getElementById("title").innerHTML = "";
+document.getElementById("text").innerHTML = "";		// Erases notes
 }
 function undo(){
 var x = document.getElementById("text").value;
