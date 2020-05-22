@@ -1,1 +1,23 @@
-temp
+By: Davante Middleton
+
+Notes: This lab wasn't hard but I think the intended purpose is impossible to accomplish.
+
+The notes are to be SAVED ON INPUT, so any change is immediately saved. 
+However, the undo simply loads that saved input, causing no change to occur.
+If the task called for THREE buttons, one to save, clear and undo, then one could load a specific set of notes and update the notes to be
+saved.
+
+Task:
+You might have to save the file to a server rather than running from localhost for this page to get localStorage to work.
+
+    Have a simple form for the the user to store their notes.
+        Create an input box (of 40 characters) to allow the user to title their notes
+        Create a textarea (10 rows, 80 columns) ) to let the user write some text.
+        As the user is writing the text (onInput) save the text value to the localStorage.
+    If the user comes back to the page, restore the text back in the form, so that the user can resume their information.
+    Offer 2 buttons, one called Clear, and one called Undo.
+        Clear erases the text in the whole form and therefore in the localStorage.
+        Undo will restore the form to the previous values.
+            It would make sense to save a previous copy of the values of the localStorage into some variables as backup.
+                Think about what happens if the user presses Undo more than once, what should happen, it should hopefully toggle back/forth           between the last two changes.
+
