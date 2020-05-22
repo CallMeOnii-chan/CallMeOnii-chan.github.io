@@ -1,5 +1,7 @@
 For the chart lab
 
+Note: Worked with Zhaowei Wu on this assignment
+
 Task: Chart Program
 
 Store the following values in a JSON array in JavaScript.
