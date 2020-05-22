@@ -20,13 +20,15 @@
   <label for="note_form">Title</label>
   <input type="text" id="title" name="title" maxlength="40" oninput="titleSave()"><br><br>  <!-- Max Length = 40 -->
 
-  <label for="notes">Notes</label>
+  <label for="note_form">Notes</label>
 <!--  <input type="text" id="notes" name="notes"><br><br>
     <input type="submit" value="Submit">  -->
-</form>
+</form>	
+<textarea rows="10" cols="80" id="text" name="text" form="note_form" oninput="textSave()">Enter notes here...</textarea>  <!-- 10 x 80 -->
 	
-<textarea rows="10" cols="80" id="text" name="notes" form="note_form" oninput="textSave()">Enter notes here...</textarea>  <!-- 10 x 80 -->
-
+<button type="button" onclick="clear()">Clear</button>
+<button type="button" onclick="undo()">Undo</button>
+	
 <script>
 function textSave() {					// Saves text
 var x = document.getElementById("text").value; 
@@ -36,8 +38,25 @@ function titleSave() {
 var x = document.getElementById("title").value; 	// Saves title
 localStorage.setItem("title", x);
 }
+function textLoad() {					// Loads text
+document.getElementById("text").innerHTML = localStorage.getItem("text");
+}
+function titleLoad() {					// Loads title
+document.getElementById("title").innerHTML = localStorage.getItem("title");
+}
+function clear(){
+localStorage.removeItem("title");
+localStorage.removeItem("text");
+}
+function undo(){
+var x = document.getElementById("text").value;
+var y = document.getElementById("title").value;  	// Copies current notes
+textLoad();
+titleLoad();						// Loads old notes
+localStorage.setItem("text", x);
+localStorage.setItem("title", y);			// Saves copies
+}
 </script>
-<!-- Retrieve
- document.getElementById("result").innerHTML = localStorage.getItem("lastname");  -->
+
 </body>
 </html>
