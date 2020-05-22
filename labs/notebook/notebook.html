@@ -14,11 +14,24 @@
         </a>
     </div>
 </nav>
-<form action="/notes.php">
-  <label for="text">Notes</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <input type="submit" value="Submit">
+	<h2>Notes</h2>
+	<p>Title and enter your notes below</p>	
+<form name="note_form" action="/notes.php">
+  <label for="note_form">Title</label>
+  <input type="text" id="title" name="title" maxlength="40" oninput="textSave()"><br><br>
+
+  <label for="notes">Notes</label>
+ // <input type="text" id="notes" name="notes"><br><br>
+ // <input type="submit" value="Submit">
 </form>
+	
+<textarea rows="10" cols="80" name="notes" form="note_form" oninput="textSave()">Enter notes here...</textarea>
+
+<script>
+function textSave() {
+  alert("The value of the input field was changed.");
+}
+</script>
 
 </body>
 </html>
