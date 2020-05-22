@@ -53,8 +53,8 @@ document.getElementById("title").innerHTML = x;
 function clear(){
 localStorage.removeItem("title");
 localStorage.removeItem("text");			// Clears storage
-document.getElementById("title").innerHTML = "";
-document.getElementById("text").innerHTML = "";		// Erases notes
+document.getElementById("title").innerHTML = " ";
+document.getElementById("text").innerHTML = " ";	// Erases notes
 }
 function undo(){
 var x = document.getElementById("text").value;
